@@ -18,3 +18,7 @@ function goPrevSlide() {
     sliderSlide[checkIndex].classList.add("active-slide")
 }
 buttonLeft.addEventListener("click", goPrevSlide)
+
+function autoPlaySlide(){
+    
+}

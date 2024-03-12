@@ -103,7 +103,7 @@ body {
     justify-content: space-between;
     max-width: 100%;
     align-items: center;
-    border: 1px solid #ffff00;
+    /* border: 1px solid #ffff00; */
     margin: 0 auto;
     color: white;
     font-family: "Bebas Neue", sans-serif;
@@ -135,7 +135,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid #fff200;
+    /* border: 1px solid #fff200; */
     margin: 0 auto;
     overflow: hidden;
 }
