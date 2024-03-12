@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+:root {
+    --boss: rgb(160, 160, 160);
+    --colors: rgb(210, 198, 198);
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+
+
+
+
+
+
+body {
+    background-image: url(https://img.freepik.com/premium-vector/auto-car-parts-repair-vector-design-background_450492-66.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    align-items: center;
+    border: 1px solid #ffff00;
+    margin: 0 auto;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+}
+
+.header-logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.header__mobile-menu {
+    cursor: pointer;
+}
+
+.main {}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.slider {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #fff200;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider__slide {
+    width: 100%;
+    display: none;
+}
+
+.slider__slide.active-slide {
+    /* background-color: rgb(255, 64, 64); */
+    display: block;
+    transition-duration: 1s;
+    transition-property: all;
+    animation-delay: 0.3s;
+    animation-direction: 1s, 1s;
+    animation-duration: 10s;
+}
+
+/* .slider__slide.active-slide:nth-child(2) {
+    background-color: #ff5500;
+}
+
+.slider__slide.active-slide:nth-child(3) {
+    background-color: #ff008c;
+}
+
+.slider__slide.active-slide:nth-child(4) {
+    background-color: #00ffae;
+}
+
+.slider__slide.active-slide:nth-child(5) {
+    background-color: #f6ff00;
+} */
+
+.slider__slide-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100px;
+    background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: absolute;
+    bottom: 50px;
+}
+
+.img-car {
+    height: 500px;
+}
+
+.slider-dots_ul {
+    display: flex;
+    position: absolute;
+    top: 70px;
+    left: 400px;
+}
+
+.slider-dots_li {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.55);
+    padding: 0px 20px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.slider-dots_li:hover {
+    color: white;
+}
+
+.slider-dots {}
+
+.arrow__left {}
+
+.arrow__right {}
+
+.footer {}
