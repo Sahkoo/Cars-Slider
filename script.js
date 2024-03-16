@@ -1,24 +1,31 @@
 let slider = document.querySelector(".slider")
-let buttonLeft = document.querySelector(".arrow__left")
-let buttonRight = document.querySelector(".arrow__right")
 let sliderSlide = document.querySelectorAll(".slider__slide")
+let sliderDotsLi = document.querySelectorAll(".slider-dots_li")
+
 
 let checkIndex = 0
 
-function goNextSlide() {
-    sliderSlide[checkIndex].classList.remove("active-slide")
-    checkIndex = (checkIndex + 1) % sliderSlide.length
-    sliderSlide[checkIndex].classList.add("active-slide")
+function autoPlaySlide(index) {
+    slider.style.transform = `translateX(-${index * 100}%)`
 }
-buttonRight.addEventListener("click", goNextSlide)
+
+function goToSlide(index) {
+    checkIndex = index
+    autoPlaySlide(checkIndex)
+}
+
+function goNextSlide() {
+    checkIndex = (checkIndex + 1) % sliderSlide.length
+    autoPlaySlide(checkIndex)
+}
 
 function goPrevSlide() {
-    sliderSlide[checkIndex].classList.remove("active-slide")
     checkIndex = (checkIndex - 1 + sliderSlide.length) % sliderSlide.length
-    sliderSlide[checkIndex].classList.add("active-slide")
+    autoPlaySlide(checkIndex)
 }
-buttonLeft.addEventListener("click", goPrevSlide)
 
-function autoPlaySlide(){
-    
+for (let i = 0; i < sliderDotsLi.length; i++) {
+    sliderDotsLi[i].addEventListener("click", function () {
+        goToSlide(i)
+    })
 }

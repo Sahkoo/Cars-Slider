@@ -96,6 +96,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    overflow: hidden;
 }
 
 .header {
@@ -116,6 +117,17 @@ body {
     height: 70px;
     border-radius: 50%;
     cursor: pointer;
+    animation: bruh 2s linear infinite;
+}
+
+@keyframes bruh {
+    0% {
+        transform: rotate(-360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 .header__mobile-menu {
@@ -127,31 +139,23 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .slider {
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin: 0 auto;
-    overflow: hidden;
+    transition: 1.5s;
 }
 
 .slider__slide {
+    flex: 0 0 100%;
     width: 100%;
-    display: none;
+    transition: 1.5s;
 }
 
-.slider__slide.active-slide {
-    /* background-color: rgb(255, 64, 64); */
-    display: block;
-    transition-duration: 1s;
-    transition-property: all;
-    animation-delay: 0.3s;
-    animation-direction: 1s, 1s;
-    animation-duration: 10s;
-}
+
 
 /* .slider__slide.active-slide:nth-child(2) {
     background-color: #ff5500;
@@ -169,12 +173,57 @@ body {
     background-color: #f6ff00;
 } */
 
-.slider__slide-body {
+.slider__slide-body-supra {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: url(./img/supra.png);
 }
+
+.slider__slide-body-mersedes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: url(./img/mersedes.png);
+}
+
+.slider__slide-body-dodge {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: url(./img/dodge.png);
+}
+
+.dodge_img {
+    width: 750px;
+    height: 273px;
+    margin-top: 100px;
+}
+
+.slider__slide-body-volkswagen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: url(./img/volkswagen.png);
+}
+
+.slider__slide-body-ford {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: url(../img/ford.png);
+}
+
+.ford_img {
+    width: 750px;
+    height: 500px;
+}
+
 
 .slider-h2 {
     font-family: "Bebas Neue", sans-serif;
@@ -185,8 +234,6 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    position: absolute;
-    bottom: 50px;
 }
 
 .img-car {
