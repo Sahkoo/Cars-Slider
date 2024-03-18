@@ -92,11 +92,9 @@ html {
 
 
 body {
-    background-image: url(https://img.freepik.com/premium-vector/auto-car-parts-repair-vector-design-background_450492-66.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     overflow: hidden;
+    height: 100vh;
+    transition: 1.5s;
 }
 
 .header {
@@ -136,14 +134,11 @@ body {
 
 .main {}
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    overflow: hidden;
-}
+.container {}
 
 .slider {
     width: 100%;
+    height: 100%;
     display: flex;
     margin: 0 auto;
     transition: 1.5s;
@@ -151,6 +146,7 @@ body {
 
 .slider__slide {
     flex: 0 0 100%;
+    height: 100%;
     width: 100%;
     transition: 1.5s;
 }
@@ -173,55 +169,108 @@ body {
     background-color: #f6ff00;
 } */
 
-.slider__slide-body-supra {
+.slider__slide-body {
+    position: relative;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: url(./img/supra.png);
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
 }
 
-.slider__slide-body-mersedes {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: url(./img/mersedes.png);
+.supra_img {
+    position: absolute;
+    right: -250px;
+    bottom: 0px;
+    z-index: 2;
 }
 
-.slider__slide-body-dodge {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: url(./img/dodge.png);
+.supra_img2 {
+    position: absolute;
+    width: 300px;
+    left: 250px;
+    top: 50px;
+}
+
+.mersedes_img {
+    position: absolute;
+    left: -100px;
+    bottom: -100px;
+    z-index: 2;
+}
+
+.mersedes_img2 {
+    position: absolute;
+    width: 200px;
+    top: 0;
+}
+
+.mersedes_img3 {
+    position: absolute;
+    width: 300px;
+    right: 0;
+    bottom: 0;
 }
 
 .dodge_img {
-    width: 750px;
-    height: 273px;
-    margin-top: 100px;
+    position: absolute;
+    width: 500px;
+    right: 0;
+    bottom: 250px;
+    z-index: 2;
 }
 
-.slider__slide-body-volkswagen {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: url(./img/volkswagen.png);
+.dodge_img2 {
+    position: absolute;
+    width: 200px;
+    right: 100px;
+    bottom: 0;
+    z-index: 2;
 }
 
-.slider__slide-body-ford {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: url(../img/ford.png);
+.dodge_img3 {
+    position: absolute;
+    width: 600px;
+    left: 0;
+    top: 100px;
+    z-index: 2;
+}
+
+
+.volkswagen_img {
+    position: absolute;
+    z-index: 2;
+    right: -250px;
+    bottom: -70px;
+}
+
+.volkswagen_img2 {
+    position: absolute;
+    left: 50px;
+    top: 30px;
+    width: 200px;
+    z-index: 2;
 }
 
 .ford_img {
-    width: 750px;
-    height: 500px;
+    position: absolute;
+    width: 600px;
+    left: 0;
+}
+
+.ford_img2 {
+    position: absolute;
+    width: 300px;
+    top: -50px;
+}
+
+.ford_img3 {
+    position: absolute;
+    width: 600px;
+    right: -100px;
+    bottom: -70px;
+    z-index: 2;
 }
 
 
@@ -229,11 +278,14 @@ body {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 100px;
-    background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    font-size: 200px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 15%, rgba(0, 0, 0, 1) 32%, rgba(255, 255, 255, 1) 49%, rgba(0, 0, 0, 1) 64%, rgba(255, 255, 255, 1) 80%, rgba(0, 0, 0, 1) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    position: relative;
+    z-index: 1;
+    padding: 100px 0px;
 }
 
 .img-car {
@@ -252,10 +304,14 @@ body {
     font-weight: 400;
     font-style: normal;
     font-size: 20px;
-    color: rgba(255, 255, 255, 0.55);
+    color:
+        /* rgba(255, 255, 255, 0.55) */
+        black;
     padding: 0px 20px;
     transition: 1s;
     cursor: pointer;
+    z-index: 4;
+    position: relative;
 }
 
 .slider-dots_li:hover {
@@ -263,9 +319,5 @@ body {
 }
 
 .slider-dots {}
-
-.arrow__left {}
-
-.arrow__right {}
 
 .footer {}

@@ -1,6 +1,7 @@
 let slider = document.querySelector(".slider")
 let sliderSlide = document.querySelectorAll(".slider__slide")
 let sliderDotsLi = document.querySelectorAll(".slider-dots_li")
+const colors = ["#FF5733", "#33FF57", "#5733FF", "#FFFF33", "#47947f"]
 
 
 let checkIndex = 0
@@ -12,6 +13,7 @@ function autoPlaySlide(index) {
 function goToSlide(index) {
     checkIndex = index
     autoPlaySlide(checkIndex)
+    document.body.style.background = colors[index]
 }
 
 function goNextSlide() {
