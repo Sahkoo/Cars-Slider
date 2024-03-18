@@ -1,7 +1,7 @@
 let slider = document.querySelector(".slider")
 let sliderSlide = document.querySelectorAll(".slider__slide")
 let sliderDotsLi = document.querySelectorAll(".slider-dots_li")
-const colors = ["#FF5733", "#33FF57", "#5733FF", "#FFFF33", "#47947f"]
+const colors = ["#00ff22", "#ffc000", "#808080", "#a300e3", "#00dbff"]
 
 
 let checkIndex = 0

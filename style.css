@@ -94,7 +94,8 @@ html {
 body {
     overflow: hidden;
     height: 100vh;
-    transition: 1.5s;
+    transition: 2s;
+    background: #00ff22;
 }
 
 .header {
